@@ -2,7 +2,7 @@
 	"products": [
 		{
 			"name": "sangeles_test_da_vpc",
-			"version": "v0.0.1",
+			"version": "v0.0.2",
 			"product_kind": "solution",
 			"tags": [
 				"sangeles",
@@ -36,118 +36,23 @@
 							}
 						]
 					},
-					"iam_permissions": [
-						{
-							"service_name": "appid",
-							"role_crns": [
-								"crn:v1:bluemix:public:iam::::serviceRole:Manager"
-							]
-						},
-						{
-							"service_name": "cloud-object-storage",
-							"role_crns": [
-								"crn:v1:bluemix:public:iam::::serviceRole:Manager"
-							]
-						},
-						{
-							"service_name": "hs-crypto",
-							"role_crns": [
-								"crn:v1:bluemix:public:iam::::serviceRole:Manager"
-							]
-						},
-						{
-							"service_name": "iam-identity",
-							"role_crns": [
-								"crn:v1:bluemix:public:iam::::role:Administrator"
-							]
-						},
-						{
-							"service_name": "kms",
-							"role_crns": [
-								"crn:v1:bluemix:public:iam::::serviceRole:Manager"
-							]
-						},
-						{
-							"service_name": "is.vpc",
-							"role_crns": [
-								"crn:v1:bluemix:public:iam::::role:Administrator"
-							]
-						}
-					],
-					"architecture": {
-						"features": [
-							{
-								"title": "Separate VPC for management",
-								"description": "Yes"
-							},
-							{
-								"title": "Separate VPC for workloads",
-								"description": "Yes"
-							},
-							{
-								"title": "Virtual Server Instances for every subnet",
-								"description": "Yes"
-							},
-							{
-								"title": "Increases security with Key Management",
-								"description": "Yes"
-							},
-							{
-								"title": "Reduces failure events by using multizone regions",
-								"description": "Yes"
-							},
-							{
-								"title": "Collects and stores Internet Protocol (IP) traffic information with Activity Tracker and Flow Logs",
-								"description": "Yes"
-							},
-							{
-								"title": "Securely connects to multiple networks with a site-to-site virtual private network",
-								"description": "Yes"
-							},
-							{
-								"title": "Simplifies risk management and demonstrates regulatory compliance with Financial Services",
-								"description": "Yes"
-							},
-							{
-								"title": "Uses an edge VPC for secure access through the public internet",
-								"description": "Yes, if enabled"
-							},
-							{
-								"title": "Uses floating IP addresses for access through the public internet",
-								"description": "No"
-							}
-						],
-						"diagrams": [
-							{
-								"diagram": {
-									"url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-landing-zone/main/reference-architectures/vsi-vsi.drawio.svg",
-									"caption": "VSI on VPC landing zone - Standard variation",
-									"type": "image/svg+xml"
-								},
-								"description": "The Standard variation of the VSI on VPC landing zone deployable architecture is based on the IBM Cloud for Financial Services reference architecture. The architecture creates a customizable and secure infrastructure, with virtual servers, to run your workloads with a Virtual Private Cloud (VPC) in multizone regions."
-							}
-						]
-					},
 					"release_notes_url": "https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-secure-infrastructure-vpc-relnotes",
 					"configuration": [
 						{
 							"key": "region",
 							"type": "string",
-							"default_value": "us-south",
 							"description": "Region slug where to deploy",
 							"required": true
 						},
 						{
 							"key": "resource_group",
 							"type": "string",
-							"default_value": "__NOT_SET__",
 							"description": "Resource group ID where to deploy",
 							"required": true
 						},
 						{
 							"key": "vpc_name",
 							"type": "string",
-							"default_value": "__NOT_SET__",
 							"description": "Name for the VPC",
 							"required": true
 						},

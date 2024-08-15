@@ -23,15 +23,9 @@ variable "vpc_name" {
   type        = string
 }
 
-variable "api_key" {
-  description = "API key"
-  type        = string
-}
-
 # Configure the IBM Provider
 provider "ibm" {
   region = var.region
-  ibmcloud_api_key = var.api_key
 }
 
 # Create a VPC

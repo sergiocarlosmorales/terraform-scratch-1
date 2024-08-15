@@ -2,7 +2,7 @@
 	"products": [
 		{
 			"name": "sangeles_test_da_vpc",
-			"version": "v0.0.2",
+			"version": "v0.0.3",
 			"product_kind": "solution",
 			"tags": [
 				"sangeles",
@@ -54,12 +54,6 @@
 							"key": "vpc_name",
 							"type": "string",
 							"description": "Name for the VPC",
-							"required": true
-						},
-						{
-							"key": "api_key",
-							"type": "password",
-							"description": "The IBM Cloud platform API key needed to deploy.",
 							"required": true
 						}
 					],

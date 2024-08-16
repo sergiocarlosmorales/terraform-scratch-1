@@ -7,29 +7,26 @@ terraform {
   }
 }
 
-variable "region" {
-  description = "Region where to deploy the VPC"
+variable "vsi_dc" {
+  description = "DC for the VSI"
   type        = string
-  default     = "us-south"
+  default     = "dal13"
 }
 
-variable "resource_group" {
-  description = "Resource group ID where to deploy the VPC"
-  type        = string
-}
-
-variable "vpc_name" {
-  description = "Name of the VPC"
+variable "vsi_hostname" {
+  description = "Hostname for the VSI"
   type        = string
 }
 
-# Configure the IBM Provider
-provider "ibm" {
-  region = var.region
-}
-
-# Create a VPC
-resource "ibm_is_vpc" "created_vpc_sangeles_fun" {
-  name = var.vpc_name
-  resource_group = var.resource_group
+resource "ibm_compute_vm_instance" "created_vsi_sangeles_da" {
+  hostname             = var.vsi_hostname
+  domain               = "softlayer.local"
+  os_reference_code    = "UBUNTU_LATEST_64"
+  datacenter           = var.vsi_dc
+  network_speed        = 1000
+  hourly_billing       = true
+  local_disk           = false
+  private_network_only = false
+  flavor_key_name      = "B1_2X8X100"
+  ipv6_enabled         = true
 }

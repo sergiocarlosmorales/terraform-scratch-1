@@ -16,13 +16,18 @@ variable "bm_hostname" {
   description = "Hostname for the Bare Metal"
   type        = string
 }
-resource "ibm_compute_bare_metal" "created_bm_sangeles_da" {
+variable "bm_ram" {
+  description = "How much RAM to assign"
+  type        = number
+}
+
+resource "ibm_compute_bare_metal" "created_bare_metal" {
   hostname         = var.bm_hostname
   domain           = "softlayer.local"
   datacenter       = var.bm_dc
   package_key_name = "DUAL_INTEL_XEON_PROC_CASCADE_LAKE_SCALABLE_FAMILY_12_DRIVES"
   process_key_name = "INTEL_INTEL_XEON_5218_2_30"
-  memory           = 384
+  memory           = var.bm_ram
   os_key_name      = "OS_CENTOS_STREAM_9_X_64_BIT"
   network_speed    = 1000
   public_bandwidth = 5000

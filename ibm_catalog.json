@@ -2,7 +2,7 @@
 	"products": [
 		{
 			"name": "ClassicBareMetal-CascadeLake",
-			"version": "v0.0.10",
+			"version": "v0.0.11",
 			"product_kind": "solution",
 			"tags": [
 				"classic",
@@ -29,11 +29,29 @@
 			"flavors": [
 				{
 					"label": "Low memory",
-					"name": "low-memory"
+					"name": "low-memory",
+					"configuration": [
+						{
+							"key": "ram",
+							"type": "number",
+							"default_value": 64,
+							"description": "How much RAM",
+							"required": true
+						}
+					]
 				},
 				{
 					"label": "High memory",
-					"name": "high-memory"
+					"name": "high-memory",
+					"configuration": [
+						{
+							"key": "ram",
+							"type": "number",
+							"default_value": 384,
+							"description": "How much RAM",
+							"required": true
+						}
+					]
 				}
 			]
 		}

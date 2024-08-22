@@ -2,7 +2,7 @@
 	"products": [
 		{
 			"name": "ClassicBareMetal-CascadeLake",
-			"version": "v0.0.11",
+			"version": "v0.0.12",
 			"product_kind": "solution",
 			"tags": [
 				"classic",
@@ -37,6 +37,18 @@
 							"default_value": 64,
 							"description": "How much RAM",
 							"required": true
+						},
+						{
+							"key": "bm_dc",
+							"type": "string",
+							"description": "Datacenter (e.g. dal13)",
+							"required": true
+						},
+						{
+							"key": "bm_hostname",
+							"type": "string",
+							"description": "Hostname",
+							"required": true
 						}
 					]
 				},
@@ -49,6 +61,18 @@
 							"type": "number",
 							"default_value": 384,
 							"description": "How much RAM",
+							"required": true
+						},
+						{
+							"key": "bm_dc",
+							"type": "string",
+							"description": "Datacenter (e.g. dal13)",
+							"required": true
+						},
+						{
+							"key": "bm_hostname",
+							"type": "string",
+							"description": "Hostname",
 							"required": true
 						}
 					]

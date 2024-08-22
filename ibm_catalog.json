@@ -2,7 +2,7 @@
 	"products": [
 		{
 			"name": "ClassicBareMetal-CascadeLake",
-			"version": "v0.0.12",
+			"version": "v0.0.13",
 			"product_kind": "solution",
 			"tags": [
 				"classic",

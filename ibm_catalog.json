@@ -2,7 +2,7 @@
 	"products": [
 		{
 			"name": "Deployable Architecture for Classic",
-			"version": "v0.0.1",
+			"version": "v0.0.8",
 			"product_kind": "solution",
 			"tags": [
 				"classic",

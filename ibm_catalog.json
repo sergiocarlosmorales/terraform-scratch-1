@@ -1,59 +1,42 @@
 {
 	"products": [
 		{
-			"name": "sangeles_test_da_vpc",
-			"version": "v0.0.7",
+			"name": "Deployable Architecture for Classic",
+			"version": "v0.0.1",
 			"product_kind": "solution",
 			"tags": [
-				"sangeles",
-				"ibm_created"
+				"classic",
+				"softlayer",
+				"infrastructure"
 			],
 			"keywords": [
-				"sangeles"
+				"bare",
+				"metal",
+				"baremetal"
 			],
-			"offering_docs_url": "https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-overview#overview-vsi",
-			"offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-landing-zone/main/.docs/images/deploy-arch-slz-vsi-lt.svg",
+			"offering_docs_url": "https://cloud.ibm.com/docs/bare-metal?topic=bare-metal-about-bm",
+			"offering_icon_url": "https://cache.globalcatalog.cloud.ibm.com/api/v1/1/artifacts/cache/999326a1ca1dd71a7a7f9ae2c5ccc2fb-public/CloudBareMetal.svg",
 			"features": [
 				{
 					"title_i18n": {
-						"en": "Create a classic VSI"
+						"en": "Deploy a Cascade Lake Bare Metal on Classic"
 					},
 					"description_i18n": {
-						"en": "Creates a classic VSI"
+						"en": "Deploy a Cascade Lake Bare Metal on Classic"
 					}
 				}
 			],
 			"flavors": [
 				{
-					"label": "Standard",
-					"name": "standard",
-					"compliance": {
-						"authority": "scc-v3",
-						"profiles": [
-							{
-								"profile_name": "IBM Cloud Framework for Financial Services",
-								"profile_version": "1.6.0"
-							}
-						]
-					},
-					"release_notes_url": "https://cloud.ibm.com/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-secure-infrastructure-vpc-relnotes",
-					"configuration": [
-						{
-							"key": "vsi_dc",
-							"type": "string",
-							"description": "DC where to deploy the classic VSI",
-							"required": true
-						},
-						{
-							"key": "vsi_hostname",
-							"type": "string",
-							"description": "Hostmame for the VSI",
-							"required": true
-						}
-					],
-					"outputs": [
-
-					],
+					"label": "Low memory",
+					"name": "low-memory",
+					"working_directory": "./low-memory",
+					"install_type": "fullstack"
+				},
+				{
+					"label": "High memory",
+					"name": "high-memory",
+					"working_directory": "./high-memory",
 					"install_type": "fullstack"
 				}
 			]

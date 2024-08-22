@@ -30,6 +30,10 @@
 				{
 					"label": "Low memory",
 					"name": "low-memory"
+				},
+				{
+					"label": "High memory",
+					"name": "high-memory"
 				}
 			]
 		}

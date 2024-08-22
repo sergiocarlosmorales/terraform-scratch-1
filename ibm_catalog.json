@@ -1,7 +1,7 @@
 {
 	"products": [
 		{
-			"name": "Deployable Architecture for Classic",
+			"name": "ClassicBareMetal-CascadeLake",
 			"version": "v0.0.8",
 			"product_kind": "solution",
 			"tags": [

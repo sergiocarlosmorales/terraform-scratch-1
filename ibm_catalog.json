@@ -2,7 +2,7 @@
 	"products": [
 		{
 			"name": "ClassicBareMetal-CascadeLake",
-			"version": "v0.0.9",
+			"version": "v0.0.10",
 			"product_kind": "solution",
 			"tags": [
 				"classic",
@@ -30,14 +30,12 @@
 				{
 					"label": "Low memory",
 					"name": "low-memory",
-					"working_directory": "./low-memory",
-					"install_type": "fullstack"
+					"working_directory": "./low-memory"
 				},
 				{
 					"label": "High memory",
 					"name": "high-memory",
-					"working_directory": "./high-memory",
-					"install_type": "fullstack"
+					"working_directory": "./high-memory"
 				}
 			]
 		}

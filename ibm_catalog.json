@@ -32,7 +32,7 @@
 					"name": "low-memory",
 					"configuration": [
 						{
-							"key": "ram",
+							"key": "bm_ram",
 							"type": "number",
 							"default_value": 64,
 							"description": "How much RAM",
@@ -57,7 +57,7 @@
 					"name": "high-memory",
 					"configuration": [
 						{
-							"key": "ram",
+							"key": "bm_ram",
 							"type": "number",
 							"default_value": 384,
 							"description": "How much RAM",

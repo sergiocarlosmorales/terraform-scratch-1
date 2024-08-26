@@ -45,6 +45,7 @@
 							{
 								"diagram": {
 									"url": "architecture.png",
+									"type": "image/png",
 									"caption": "Bare Metal on Classic Infrastructure layout"
 								},
 								"description": "Architecture of Bare Metal on Classic Infrastructure"

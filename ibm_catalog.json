@@ -38,17 +38,34 @@
 			],
 			"flavors": [
 				{
-					"label": "Low memory",
-					"name": "low-memory",
+					"label": "Small profile",
+					"name": "small-profile",
 					"architecture": {
+						"features": [
+							{
+								"title": "CPU Cores",
+								"description": "32 cores"
+							},
+							{
+								"title": "Memory",
+								"description": "64 GB"
+							},
+							{
+								"title": "Uplink speed",
+								"description": "1 Gbps"
+							},
+							{
+								"title": "Bandwidth",
+								"description": "5000 GB"
+							}
+						],
 						"diagrams": [
 							{
 								"diagram": {
-									"url": "baremetal-architecture.svg",
+									"url": "https://raw.githubusercontent.com/sergiocarlosmorales/terraform-scratch-1/main/baremetal-architecture.svg",
 									"caption": "Architecture of Bare Metal on Classic Infrastructure and its underlying services",
 									"type": "image/svg+xml"
-								},
-								"description": "Architecture of Bare Metal on Classic Infrastructure"
+								}
 							}
 						]
 					},
@@ -58,6 +75,13 @@
 							"type": "number",
 							"default_value": 64,
 							"description": "How much RAM",
+							"required": true
+						},
+						{
+							"key": "bm_cpu_keyname",
+							"type": "string",
+							"default_value": "INTEL_INTEL_XEON_5218_2_30",
+							"description": "Product keyName for the CPU (e.g., INTEL_INTEL_XEON_5218_2_30)",
 							"required": true
 						},
 						{
@@ -75,14 +99,111 @@
 					]
 				},
 				{
-					"label": "High memory",
-					"name": "high-memory",
+					"label": "Medium profile",
+					"name": "medium-profile",
+					"architecture": {
+						"features": [
+							{
+								"title": "CPU Cores",
+								"description": "40 cores"
+							},
+							{
+								"title": "Memory",
+								"description": "128 GB"
+							},
+							{
+								"title": "Uplink speed",
+								"description": "1 Gbps"
+							},
+							{
+								"title": "Bandwidth",
+								"description": "5000 GB"
+							}
+						],
+						"diagrams": [
+							{
+								"diagram": {
+									"url": "https://raw.githubusercontent.com/sergiocarlosmorales/terraform-scratch-1/main/baremetal-architecture.svg",
+									"caption": "Architecture of Bare Metal on Classic Infrastructure and its underlying services",
+									"type": "image/svg+xml"
+								}
+							}
+						]
+					},
+					"configuration": [
+						{
+							"key": "bm_ram",
+							"type": "number",
+							"default_value": 128,
+							"description": "How much RAM",
+							"required": true
+						},
+						{
+							"key": "bm_cpu_keyname",
+							"type": "string",
+							"default_value": "INTEL_INTEL_XEON_6248_2_60",
+							"description": "Product keyName for the CPU (e.g., INTEL_INTEL_XEON_5218_2_30)",
+							"required": true
+						},
+						{
+							"key": "bm_dc",
+							"type": "string",
+							"description": "Datacenter (e.g. dal13)",
+							"required": true
+						},
+						{
+							"key": "bm_hostname",
+							"type": "string",
+							"description": "Hostname",
+							"required": true
+						}
+					]
+				},
+				{
+					"label": "Large profile",
+					"name": "large-profile",
+					"architecture": {
+						"features": [
+							{
+								"title": "CPU Cores",
+								"description": "48 cores"
+							},
+							{
+								"title": "Memory",
+								"description": "384 GB"
+							},
+							{
+								"title": "Uplink speed",
+								"description": "1 Gbps"
+							},
+							{
+								"title": "Bandwidth",
+								"description": "5000 GB"
+							}
+						],
+						"diagrams": [
+							{
+								"diagram": {
+									"url": "https://raw.githubusercontent.com/sergiocarlosmorales/terraform-scratch-1/main/baremetal-architecture.svg",
+									"caption": "Architecture of Bare Metal on Classic Infrastructure and its underlying services",
+									"type": "image/svg+xml"
+								}
+							}
+						]
+					},
 					"configuration": [
 						{
 							"key": "bm_ram",
 							"type": "number",
 							"default_value": 384,
 							"description": "How much RAM",
+							"required": true
+						},
+						{
+							"key": "bm_cpu_keyname",
+							"type": "string",
+							"default_value": "INTEL_INTEL_XEON_8260_2_40",
+							"description": "Product keyName for the CPU (e.g., INTEL_INTEL_XEON_5218_2_30)",
 							"required": true
 						},
 						{

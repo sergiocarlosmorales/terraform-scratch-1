@@ -4,7 +4,7 @@
 			"name": "ClassicBareMetal-CascadeLake",
 			"short_description": "Deploy IBM Cloud Bare Metal Servers on Classic Infrastructure.",
 			"long_description": "IBM Cloud® Bare Metal Servers are single-tenant, dedicated physical servers that can be deployed and managed as cloud services with various billing options, including hourly and monthly.",
-			"version": "v0.0.16",
+			"version": "v0.0.17",
 			"product_kind": "solution",
 			"tags": [
 				"classic",
